@@ -1,0 +1,87 @@
+{
+    "height": 36,
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": [
+	"custom/launcher",
+	"sway/workspaces",
+	"sway/scratchpad",
+	"sway/mode",
+	"tray"
+    ],
+    "modules-right": [
+	"cpu",
+	"memory",
+	"network",
+	"pulseaudio",
+	"temperature",
+	"clock",
+	"custom/swaync",
+	"custom/logout"
+    ],
+    "custom/launcher": {
+	"format": "",
+	"on-click": "rofi -show drun",
+	"tooltip": false
+    },
+    "sway/workspaces": {
+	"disable-scroll": false,
+	"format": "{icon}",
+	"format-icons": {
+		"focused": "󰝤",
+		"default": "󰝣"
+	}
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "tray": {
+	"icon-size": 24,
+        "spacing": 8
+    },    
+    "cpu": {
+        "format": "  {load}",
+	"tooltip-fomat": "{usage{n}}"
+    },
+    "memory": {
+        "format": "  {used} GB",
+	"tooltip-fomat": "{avail}"
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "tooltip-format": "{signalStrength}%",
+        "format-disconnected": "  Disconnected"
+    },
+    "pulseaudio": {
+        "format": "  {volume}%",
+        "format-muted": "  {volume}%",
+	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
+	"tooltip-format": "{desc}"
+    },
+    "temperature": {
+        "format": " {}°C"
+    },
+    "clock": {
+	"format": "  {:%a, %d %b, %H:%M}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    },
+    "custom/swaync": {
+	"format": "",
+	"on-click": "swaync-client -t -sw",
+	"tooltip": false
+    },
+    "custom/logout": {
+	"format": "",
+	"on-click": "sway exit",
+	"tooltip": false
+    }
+}

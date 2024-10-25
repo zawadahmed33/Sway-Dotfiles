@@ -1,0 +1,58 @@
+@define-color black #282c34;
+@define-color red #e06c75;
+@define-color green #98c379;
+@define-color yellow #e5c07b;
+@define-color blue #61afef;
+@define-color magenta #c678dd;
+@define-color cyan #56b6c2;
+@define-color orange #d19a66;
+@define-color grey #5c6370;
+@define-color white #abb2bf;
+
+* {
+    font-family: JetBrains Mono SemiBold;
+    font-size: 11pt;
+}
+
+window#waybar {
+    background-color: @black;
+    color: @white;
+}
+
+#custom-launcher,
+#workspaces,
+#scratchpad,
+#mode,
+#tray,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#temperature,
+#clock,
+#custom-swaync,
+#custom-logout
+{
+    padding: 0px 16px 0px 16px;
+}
+
+#custom-launcher {
+    color: @green;
+}
+
+#workspaces button {
+    padding: 0px 4px 0px 4px;
+    border: none;
+    background: none;
+    color: @white;
+}
+
+#workspaces button:hover {
+    box-shadow: inherit;
+    text-shadow: inherit;
+}
+
+#custom-logout {
+    color: @red;
+}
+
