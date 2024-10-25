@@ -171,7 +171,7 @@ set $grey #5c6370
 set $white #abb2bf
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $green  $black  $white  $green    $green
+client.focused          $blue   $black  $white  $blue     $blue
 client.focused_inactive $grey   $black  $white  $grey     $grey
 client.unfocused        $grey   $black  $white  $grey     $grey
 client.urgent           $red    $black  $white  $red      $red
@@ -185,6 +185,6 @@ default_border pixel 2
 default_floating_border pixel 2
 
 # Gaps
-gaps inner 8px
+gaps inner 4px
 
 include /etc/sway/config.d/*
