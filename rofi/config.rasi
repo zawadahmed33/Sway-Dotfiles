@@ -8,7 +8,7 @@ configuration {
     font: "Jetbrains Mono SemiBold 12";
     foreground: #abb2bf;
     background-color: #282c34;
-    active-background: #98c379;
+    active-background: #61afef;
     urgent-background: #e06c75;
     urgent-foreground: #282c34;
     selected-background: @active-background;
