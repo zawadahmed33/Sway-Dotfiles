@@ -85,7 +85,7 @@
 	"tooltip": false
     },
     "custom/logout": {
-	"format": "",
+	"format": "",
 	"on-click": "sway exit",
 	"tooltip": false
     }
