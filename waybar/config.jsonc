@@ -6,6 +6,7 @@
     "modules-left": [
 	"custom/launcher",
 	"sway/workspaces",
+	"sway/window",
 	"sway/scratchpad",
 	"sway/mode",
 	"tray"
@@ -29,9 +30,13 @@
 	"disable-scroll": false,
 	"format": "{icon}",
 	"format-icons": {
-		"focused": "󰝤",
-		"default": "󰝣"
+		"focused": "",
+		"default": ""
 	}
+    },
+    "sway/window": {
+	"format": "  {}",
+	"max-length": 36
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
