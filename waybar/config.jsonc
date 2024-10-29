@@ -9,6 +9,8 @@
 	"sway/window",
 	"sway/scratchpad",
 	"sway/mode",
+    ],
+    "modules-center": [
 	"tray"
     ],
     "modules-right": [
@@ -18,7 +20,6 @@
 	"pulseaudio",
 	"temperature",
 	"clock",
-	"custom/swaync",
 	"custom/logout"
     ],
     "custom/launcher": {
@@ -30,13 +31,13 @@
 	"disable-scroll": false,
 	"format": "{icon}",
 	"format-icons": {
-		"focused": "",
-		"default": ""
+		"focused": "󰝤",
+		"default": "󰝣"
 	}
     },
     "sway/window": {
 	"format": "  {}",
-	"max-length": 36
+	"max-length": 48
     },
     "sway/scratchpad": {
         "format": "{icon} {count}",
@@ -54,11 +55,11 @@
     },    
     "cpu": {
         "format": "  {load}",
-	"tooltip-fomat": "{usage{n}}"
+	"tooltip-format": "{usage{n}}"
     },
     "memory": {
-        "format": "  {used} GB",
-	"tooltip-fomat": "{avail}"
+        "format": "  {used} GiB",
+	"tooltip-format": "{avail} GiB"
     },
     "network": {
         "format-wifi": "  {essid}",
@@ -66,7 +67,7 @@
         "format-disconnected": "  Disconnected"
     },
     "pulseaudio": {
-        "format": "  {volume}%",
+        "format": "  {volume}",
         "format-muted": "  {volume}%",
 	"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
@@ -79,13 +80,8 @@
 	"format": "  {:%a, %d %b, %H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
-    "custom/swaync": {
-	"format": "",
-	"on-click": "swaync-client -t -sw",
-	"tooltip": false
-    },
     "custom/logout": {
-	"format": "",
+	"format": "",
 	"on-click": "sway exit",
 	"tooltip": false
     }

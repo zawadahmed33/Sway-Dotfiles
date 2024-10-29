@@ -1,5 +1,6 @@
 ### Variables
 
+
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
 # Home row direction keys, like vim
@@ -12,22 +13,30 @@ set $term kitty
 # Your preferred application launcher
 set $menu rofi -show drun
 
+
 ### Output configuration
+
 
 # Start the swww daemon to restore wallpaper
 exec --no-startup-id swww-daemon
 
+
 ### Idle configuration
+
 
 # Lock screen after 10 minutes seconds of inactivity
 exec swayidle -w timeout 600 "swaylock"
 
+
 ### Input configuration
+
 
 # Enable numlock on startup
 input type:keyboard xkb_numlock enabled
 
+
 ### Key bindings
+
 
 # Basics:
     # Start a terminal
@@ -143,42 +152,49 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+
 ### Status Bar:
+
 
 # Waybar
 bar swaybar_command waybar
 
+
 ### Notifications
+
 
 # Swaync
 exec --no-startup-id swaync
 
+
 ### Ricing stuff
+
 
 # Set font
 font pango:JetBrains Mono SemiBold 11
 
 # One Dark colors
 set $black #282c34
-set $red #e06c75
+set $white #abb2bf
+set $light-red #e06c75
+set $dark-red #be5046
 set $green #98c379
-set $yellow #e5c07b
+set $light-yellow #e5c07b
+set $dark-yellow #d19a66
 set $blue #61afef
 set $magenta #c678dd
 set $cyan #56b6c2
-set $orange #d19a66
-set $grey #5c6370
-set $white #abb2bf
+set $gutter-grey #4b5263
+set $comment-grey #5c6370
 
-# class                 border  backgr. text    indicator child_border
-client.focused          $blue   $black  $white  $blue     $blue
-client.focused_inactive $grey   $black  $white  $grey     $grey
-client.unfocused        $grey   $black  $white  $grey     $grey
-client.urgent           $red    $black  $white  $red      $red
-client.placeholder      $black  $grey   $white  $black    $grey
+# class                 border        backgr.       text    indicator     child_border
+client.focused          $blue         $black        $white  $blue         $blue
+client.focused_inactive $comment-grey $black        $white  $comment-grey $comment-grey
+client.unfocused        $comment-grey $black        $white  $comment-grey $comment-grey
+client.urgent           $light-red    $black        $white  $light-red    $light-red
+client.placeholder      $black        $comment-grey $white  $black        $comment-grey
 
 client.background       $white
-
 
 # Remove title bar
 default_border pixel 2
